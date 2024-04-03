@@ -1,453 +1,554 @@
-export const sampleData = [
-    {
-      name: 'David Taylor',
-      age: 49,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 4894,
-      gender: 'non-binary',
-      image: 'src/images/image2.png'
-    },
-    {
-      name: 'Grace Miller',
-      age: 23,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3425,
-      gender: 'female',
-      image: 'src/images/image9.png'
-    },
-    {
-      name: 'Bob Davis',
-      age: 23,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 2450,
-      gender: 'female',
-      image: 'src/images/image3.png'
-    },
-    {
-      name: 'David Brown',
-      age: 20,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 2919,
-      gender: 'male',
-      image: 'src/images/image15.png'
-    },
-    {
-      name: 'David Smith',
-      age: 45,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 4879,
-      gender: 'female',
-      image: 'src/images/image10.png'
-    },
-    {
-      name: 'Frank Williams',
-      age: 31,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 1945,
-      gender: 'female',
-      image: 'src/images/image11.png'
-    },
-    {
-      name: 'Emma Smith',
-      age: 18,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 2811,
-      gender: 'female',
-      image: 'src/images/image5.png'
-    },
-    {
-      name: 'Charlie Taylor',
-      age: 30,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4916,
-      gender: 'male',
-      image: 'src/images/image11.png'
-    },
-    {
-      name: 'Charlie Johnson',
-      age: 28,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 1458,
-      gender: 'non-binary',
-      image: 'src/images/image5.png'
-    },
-    {
-      name: 'Charlie Jones',
-      age: 30,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 1026,
-      gender: 'female',
-      image: 'src/images/image3.png'
-    },
-    {
-      name: 'Charlie Jones',
-      age: 19,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 2187,
-      gender: 'female',
-      image: 'src/images/image1.png'
-    },
-    {
-      name: 'Frank Moore',
-      age: 44,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3749,
-      gender: 'male',
-      image: 'src/images/image13.png'
-    },
-    {
-      name: 'Isabella Brown',
-      age: 24,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 2996,
-      gender: 'non-binary',
-      image: 'src/images/image6.png'
-    },
-    {
-      name: 'Isabella Johnson',
-      age: 32,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 1028,
-      gender: 'male',
-      image: 'src/images/image2.png'
-    },
-    {
-      name: 'David Miller',
-      age: 25,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 3470,
-      gender: 'non-binary',
-      image: 'src/images/image14.png'
-    },
-    {
-      name: 'Emma Jones',
-      age: 29,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3569,
-      gender: 'non-binary',
-      image: 'src/images/image10.png'
-    },
-    {
-      name: 'Frank Brown',
-      age: 23,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 2439,
-      gender: 'female',
-      image: 'src/images/image4.png'
-    },
-    {
-      name: 'Bob Williams',
-      age: 36,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 1575,
-      gender: 'non-binary',
-      image: 'src/images/image10.png'
-    },
-    {
-      name: 'Isabella Williams',
-      age: 49,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 1364,
-      gender: 'non-binary',
-      image: 'src/images/image4.png'
-    },
-    {
-      name: 'Alice Jones',
-      age: 19,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 4060,
-      gender: 'male',
-      image: 'src/images/image10.png'
-    },
-    {
-      name: 'Grace Williams',
-      age: 36,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 2437,
-      gender: 'non-binary',
-      image: 'src/images/image3.png'
-    },
-    {
-      name: 'Henry Davis',
-      age: 34,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 1046,
-      gender: 'non-binary',
-      image: 'src/images/image9.png'
-    },
-    {
-      name: 'Alice Williams',
-      age: 48,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 1929,
-      gender: 'male',
-      image: 'src/images/image8.png'
-    },
-    {
-      name: 'Bob Miller',
-      age: 19,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 2361,
-      gender: 'non-binary',
-      image: 'src/images/image9.png'
-    },
-    {
-      name: 'Grace Jones',
-      age: 23,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 4016,
-      gender: 'non-binary',
-      image: 'src/images/image9.png'
-    },
-    {
-      name: 'David Jones',
-      age: 35,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 1558,
-      gender: 'non-binary',
-      image: 'src/images/image12.png'
-    },
-    {
-      name: 'Frank Miller',
-      age: 42,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4633,
-      gender: 'non-binary',
-      image: 'src/images/image5.png'
-    },
-    {
-      name: 'Jack Miller',
-      age: 48,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 2203,
-      gender: 'male',
-      image: 'src/images/image8.png'
-    },
-    {
-      name: 'Emma Williams',
-      age: 34,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 3618,
-      gender: 'male',
-      image: 'src/images/image9.png'
-    },
-    {
-      name: 'Jack Johnson',
-      age: 32,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3872,
-      gender: 'non-binary',
-      image: 'src/images/image3.png'
-    },
-    {
-      name: 'Emma Brown',
-      age: 24,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 2894,
-      gender: 'female',
-      image: 'src/images/image16.png'
-    },
-    {
-      name: 'Alice Jones',
-      age: 18,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 1674,
-      gender: 'non-binary',
-      image: 'src/images/image7.png'
-    },
-    {
-      name: 'Henry Jones',
-      age: 48,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4796,
-      gender: 'non-binary',
-      image: 'src/images/image15.png'
-    },
-    {
-      name: 'Alice Jones',
-      age: 35,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3555,
-      gender: 'non-binary',
-      image: 'src/images/image8.png'
-    },
-    {
-      name: 'Grace Miller',
-      age: 38,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 2909,
-      gender: 'male',
-      image: 'src/images/image11.png'
-    },
-    {
-      name: 'Emma Jones',
-      age: 25,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 1880,
-      gender: 'female',
-      image: 'src/images/image5.png'
-    },
-    {
-      name: 'Jack Davis',
-      age: 49,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 2080,
-      gender: 'female',
-      image: 'src/images/image1.png'
-    },
-    {
-      name: 'Isabella Miller',
-      age: 26,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 2432,
-      gender: 'male',
-      image: 'src/images/image1.png'
-    },
-    {
-      name: 'Charlie Smith',
-      age: 36,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 3780,
-      gender: 'female',
-      image: 'src/images/image1.png'
-    },
-    {
-      name: 'Henry Williams',
-      age: 32,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 4431,
-      gender: 'non-binary',
-      image: 'src/images/image4.png'
-    },
-    {
-      name: 'Frank Williams',
-      age: 49,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 1869,
-      gender: 'male',
-      image: 'src/images/image10.png'
-    },
-    {
-      name: 'Henry Williams',
-      age: 39,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 1746,
-      gender: 'non-binary',
-      image: 'src/images/image1.png'
-    },
-    {
-      name: 'Henry Jones',
-      age: 49,
-      isSmoker: false,
-      hasPets: false,
-      maxBudget: 3634,
-      gender: 'male',
-      image: 'src/images/image14.png'
-    },
-    {
-      name: 'Henry Wilson',
-      age: 45,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4365,
-      gender: 'male',
-      image: 'src/images/image12.png'
-    },
-    {
-      name: 'Charlie Williams',
-      age: 49,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4252,
-      gender: 'female',
-      image: 'src/images/image14.png'
-    },
-    {
-      name: 'David Taylor',
-      age: 23,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 3983,
-      gender: 'non-binary',
-      image: 'src/images/image12.png'
-    },
-    {
-      name: 'Alice Davis',
-      age: 34,
-      isSmoker: false,
-      hasPets: true,
-      maxBudget: 3248,
-      gender: 'female',
-      image: 'src/images/image8.png'
-    },
-    {
-      name: 'Frank Brown',
-      age: 48,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 2256,
-      gender: 'non-binary',
-      image: 'src/images/image6.png'
-    },
-    {
-      name: 'Henry Wilson',
-      age: 28,
-      isSmoker: true,
-      hasPets: true,
-      maxBudget: 4632,
-      gender: 'male',
-      image: 'src/images/image15.png'
-    },
-    {
-      name: 'Alice Williams',
-      age: 36,
-      isSmoker: true,
-      hasPets: false,
-      maxBudget: 4757,
-      gender: 'female',
-      image: 'src/images/image11.png'
-    }
-  ]
-  
+const sampleData = [
+  {
+    name: 'Isabella Davis',
+    age: 28,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 3450,
+    gender: 'non-binary',
+    image: 'src/images/image9.png',
+    city: 'San Francisco',
+    id: 1
+  },
+  {
+    name: 'Bob Moore',
+    age: 39,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 4579,
+    gender: 'male',
+    image: 'src/images/image16.png',
+    city: 'San Francisco',
+    id: 2
+  },
+  {
+    name: 'Henry Taylor',
+    age: 42,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 2139,
+    gender: 'non-binary',
+    image: 'src/images/image16.png',
+    city: 'Denver',
+    id: 3
+  },
+  {
+    name: 'Isabella Wilson',
+    age: 39,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3209,
+    gender: 'male',
+    image: 'src/images/image6.png',
+    city: 'Denver',
+    id: 4
+  },
+  {
+    name: 'Charlie Brown',
+    age: 42,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 4011,
+    gender: 'male',
+    image: 'src/images/image16.png',
+    city: 'San Francisco',
+    id: 5
+  },
+  {
+    name: 'Henry Wilson',
+    age: 18,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 1135,
+    gender: 'male',
+    image: 'src/images/image4.png',
+    city: 'San Francisco',
+    id: 6
+  },
+  {
+    name: 'Isabella Davis',
+    age: 37,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 3218,
+    gender: 'female',
+    image: 'src/images/image16.png',
+    city: 'Denver',
+    id: 7
+  },
+  {
+    name: 'Alice Johnson',
+    age: 23,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 3387,
+    gender: 'non-binary',
+    image: 'src/images/image7.png',
+    city: 'San Francisco',
+    id: 8
+  },
+  {
+    name: 'Jack Brown',
+    age: 23,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 2388,
+    gender: 'non-binary',
+    image: 'src/images/image15.png',
+    city: 'San Francisco',
+    id: 9
+  },
+  {
+    name: 'Isabella Miller',
+    age: 43,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 4358,
+    gender: 'non-binary',
+    image: 'src/images/image1.png',
+    city: 'Denver',
+    id: 10
+  },
+  {
+    name: 'Alice Smith',
+    age: 35,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 1112,
+    gender: 'female',
+    image: 'src/images/image11.png',
+    city: 'San Francisco',
+    id: 11
+  },
+  {
+    name: 'Isabella Smith',
+    age: 30,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 2648,
+    gender: 'non-binary',
+    image: 'src/images/image5.png',
+    city: 'Denver',
+    id: 12
+  },
+  {
+    name: 'Emma Wilson',
+    age: 32,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 1774,
+    gender: 'female',
+    image: 'src/images/image15.png',
+    city: 'Denver',
+    id: 13
+  },
+  {
+    name: 'Alice Miller',
+    age: 25,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 1389,
+    gender: 'male',
+    image: 'src/images/image13.png',
+    city: 'San Francisco',
+    id: 14
+  },
+  {
+    name: 'Emma Smith',
+    age: 42,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 4269,
+    gender: 'male',
+    image: 'src/images/image7.png',
+    city: 'Denver',
+    id: 15
+  },
+  {
+    name: 'Alice Moore',
+    age: 47,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 3004,
+    gender: 'male',
+    image: 'src/images/image13.png',
+    city: 'San Francisco',
+    id: 16
+  },
+  {
+    name: 'Jack Miller',
+    age: 40,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 2199,
+    gender: 'female',
+    image: 'src/images/image2.png',
+    city: 'Denver',
+    id: 17
+  },
+  {
+    name: 'Isabella Davis',
+    age: 25,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 2725,
+    gender: 'non-binary',
+    image: 'src/images/image11.png',
+    city: 'Denver',
+    id: 18
+  },
+  {
+    name: 'Bob Brown',
+    age: 30,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 4508,
+    gender: 'male',
+    image: 'src/images/image8.png',
+    city: 'San Francisco',
+    id: 19
+  },
+  {
+    name: 'Jack Williams',
+    age: 47,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 3615,
+    gender: 'male',
+    image: 'src/images/image8.png',
+    city: 'Denver',
+    id: 20
+  },
+  {
+    name: 'Grace Brown',
+    age: 46,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 2937,
+    gender: 'male',
+    image: 'src/images/image2.png',
+    city: 'San Francisco',
+    id: 21
+  },
+  {
+    name: 'Isabella Wilson',
+    age: 38,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 4550,
+    gender: 'non-binary',
+    image: 'src/images/image1.png',
+    city: 'San Francisco',
+    id: 22
+  },
+  {
+    name: 'Isabella Williams',
+    age: 44,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 2039,
+    gender: 'female',
+    image: 'src/images/image8.png',
+    city: 'Denver',
+    id: 23
+  },
+  {
+    name: 'Alice Williams',
+    age: 50,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 2609,
+    gender: 'female',
+    image: 'src/images/image11.png',
+    city: 'San Francisco',
+    id: 24
+  },
+  {
+    name: 'Alice Johnson',
+    age: 24,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 4284,
+    gender: 'female',
+    image: 'src/images/image14.png',
+    city: 'Denver',
+    id: 25
+  },
+  {
+    name: 'David Miller',
+    age: 24,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 1077,
+    gender: 'non-binary',
+    image: 'src/images/image15.png',
+    city: 'Denver',
+    id: 26
+  },
+  {
+    name: 'Emma Williams',
+    age: 31,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3656,
+    gender: 'non-binary',
+    image: 'src/images/image15.png',
+    city: 'Denver',
+    id: 27
+  },
+  {
+    name: 'Emma Williams',
+    age: 33,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 4541,
+    gender: 'non-binary',
+    image: 'src/images/image16.png',
+    city: 'Denver',
+    id: 28
+  },
+  {
+    name: 'Alice Jones',
+    age: 29,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 4096,
+    gender: 'non-binary',
+    image: 'src/images/image10.png',
+    city: 'San Francisco',
+    id: 29
+  },
+  {
+    name: 'Isabella Smith',
+    age: 42,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 3121,
+    gender: 'female',
+    image: 'src/images/image6.png',
+    city: 'San Francisco',
+    id: 30
+  },
+  {
+    name: 'Henry Williams',
+    age: 25,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 1425,
+    gender: 'male',
+    image: 'src/images/image14.png',
+    city: 'San Francisco',
+    id: 31
+  },
+  {
+    name: 'Charlie Davis',
+    age: 38,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 1866,
+    gender: 'male',
+    image: 'src/images/image6.png',
+    city: 'Denver',
+    id: 32
+  },
+  {
+    name: 'Henry Taylor',
+    age: 22,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3544,
+    gender: 'male',
+    image: 'src/images/image6.png',
+    city: 'Denver',
+    id: 33
+  },
+  {
+    name: 'Isabella Jones',
+    age: 31,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 3710,
+    gender: 'female',
+    image: 'src/images/image11.png',
+    city: 'San Francisco',
+    id: 34
+  },
+  {
+    name: 'Jack Davis',
+    age: 30,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 3763,
+    gender: 'non-binary',
+    image: 'src/images/image10.png',
+    city: 'Denver',
+    id: 35
+  },
+  {
+    name: 'Alice Williams',
+    age: 48,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 2335,
+    gender: 'non-binary',
+    image: 'src/images/image4.png',
+    city: 'Denver',
+    id: 36
+  },
+  {
+    name: 'Emma Moore',
+    age: 30,
+    isSmoker: true,
+    hasPets: false,
+    maxBudget: 1932,
+    gender: 'female',
+    image: 'src/images/image7.png',
+    city: 'San Francisco',
+    id: 37
+  },
+  {
+    name: 'Bob Jones',
+    age: 50,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 4219,
+    gender: 'female',
+    image: 'src/images/image6.png',
+    city: 'Denver',
+    id: 38
+  },
+  {
+    name: 'Bob Wilson',
+    age: 48,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 1713,
+    gender: 'female',
+    image: 'src/images/image15.png',
+    city: 'Denver',
+    id: 39
+  },
+  {
+    name: 'Charlie Taylor',
+    age: 29,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3356,
+    gender: 'female',
+    image: 'src/images/image7.png',
+    city: 'San Francisco',
+    id: 40
+  },
+  {
+    name: 'Grace Williams',
+    age: 43,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 2464,
+    gender: 'male',
+    image: 'src/images/image1.png',
+    city: 'Denver',
+    id: 41
+  },
+  {
+    name: 'Alice Smith',
+    age: 27,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 1388,
+    gender: 'female',
+    image: 'src/images/image2.png',
+    city: 'San Francisco',
+    id: 42
+  },
+  {
+    name: 'Jack Wilson',
+    age: 22,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3711,
+    gender: 'male',
+    image: 'src/images/image14.png',
+    city: 'Denver',
+    id: 43
+  },
+  {
+    name: 'David Davis',
+    age: 25,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 1490,
+    gender: 'female',
+    image: 'src/images/image7.png',
+    city: 'San Francisco',
+    id: 44
+  },
+  {
+    name: 'Bob Wilson',
+    age: 24,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 2298,
+    gender: 'female',
+    image: 'src/images/image16.png',
+    city: 'San Francisco',
+    id: 45
+  },
+  {
+    name: 'Jack Jones',
+    age: 49,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 4070,
+    gender: 'female',
+    image: 'src/images/image13.png',
+    city: 'Denver',
+    id: 46
+  },
+  {
+    name: 'Alice Miller',
+    age: 23,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 1802,
+    gender: 'male',
+    image: 'src/images/image11.png',
+    city: 'Denver',
+    id: 47
+  },
+  {
+    name: 'Bob Brown',
+    age: 32,
+    isSmoker: false,
+    hasPets: true,
+    maxBudget: 2255,
+    gender: 'male',
+    image: 'src/images/image15.png',
+    city: 'San Francisco',
+    id: 48
+  },
+  {
+    name: 'Henry Jones',
+    age: 25,
+    isSmoker: false,
+    hasPets: false,
+    maxBudget: 1177,
+    gender: 'female',
+    image: 'src/images/image5.png',
+    city: 'San Francisco',
+    id: 49
+  },
+  {
+    name: 'David Taylor',
+    age: 33,
+    isSmoker: true,
+    hasPets: true,
+    maxBudget: 3493,
+    gender: 'female',
+    image: 'src/images/image2.png',
+    city: 'San Francisco',
+    id: 50
+  }
+]
+
+export default sampleData;
