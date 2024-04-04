@@ -6,12 +6,14 @@ import FirstPage from './FirstPage'
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import RoommateDetail from './RoommateDetail';
 
 
 function App() {
   const [userData, setUserData] = useState(sampleData)
 
   const navigate = useNavigate();
+
 
   function filterByCity(event){
     setUserData(sampleData.filter(user => {
@@ -27,6 +29,8 @@ function App() {
       <Routes>
         <Route path='/roommates/:city' element={<City userInfo={userData} />}/>
         <Route path='/' element={<FirstPage filterByCity={filterByCity} setUserData={setUserData}/>} />
+        <Route path='/roommates/details/:id' element={<RoommateDetail sampleData={userData}/>} />
+
       </Routes>
     </div>
   );
