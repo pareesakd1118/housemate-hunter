@@ -1,9 +1,12 @@
 import { useId } from "react"
 import Card from "./Card"
+import './City.css'
 
 export default function City({userInfo}){
+
 const allUsers = userInfo.map(user => {
-    return (
+    
+            return (
         <Card
             key={user.id}
             id={user.id}
@@ -12,10 +15,12 @@ const allUsers = userInfo.map(user => {
             image={user.image}
         />
     )
-})
+
+    })
+
 
     return (
-        <div>
+        <div className='roommate-container'>
             {allUsers} 
         </div>
        

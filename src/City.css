@@ -1,0 +1,17 @@
+img {
+    height: 80%; 
+    width: 88%; 
+    cursor: pointer; 
+    margin-top: 2%; 
+    border-radius: 20px; 
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+.roommate-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; 
+    background-color: #A3C1AD;
+}
