@@ -37,3 +37,12 @@ function App() {
 }
 
 export default App;
+
+//filter by gender, pets, smoker, age max (max and all lower), budget ranges (under 1000, 1000-1999, 2-2.9, etc up to 5k)
+//input fields, then submit via "apply filters" button
+//Gender: male, female, non-binary
+//Pets: true or false
+//Smoker: Yes or No
+//Budget: (see above)
+//Age: input age and all lower
+//

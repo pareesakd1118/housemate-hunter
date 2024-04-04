@@ -23,6 +23,5 @@ const allUsers = userInfo.map(user => {
         <div className='roommate-container'>
             {allUsers} 
         </div>
-       
     )
 }
