@@ -3,16 +3,21 @@ import Card from "./Card"
 
 export default function City({userInfo}){
 const allUsers = userInfo.map(user => {
-    <Card
-    key={user.id}
-    id={user.id}
-    name={user.name}
-    age={user.age}
-    image={user.image}
-    />
+    return (
+        <Card
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            age={user.age}
+            image={user.image}
+        />
+    )
 })
 
     return (
-        {allUsers}
+        <div>
+            {allUsers} 
+        </div>
+       
     )
 }
