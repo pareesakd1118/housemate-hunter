@@ -1,6 +1,6 @@
 img {
     height: 80%; 
-    width: 85%; 
+    width: 88%; 
     cursor: pointer; 
     margin-top: 2%; 
     border-radius: 20px; 
@@ -13,4 +13,5 @@ img {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px; 
+    background-color: #A3C1AD;
 }
