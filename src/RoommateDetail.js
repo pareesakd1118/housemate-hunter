@@ -18,7 +18,7 @@ function RoommateDetails ( {sampleData} ) {
             <h2>{details.name}, {details.age}</h2>
             <div classname="detail"><strong>Smoker:</strong> {details.isSmoker ? 'Yes' : 'No'} </div>
             <div classname="detail"><strong>Pets:</strong> {details.hasPets ? 'Yes' : 'No'} </div>
-            <div classname="detail"><strong>Max Budget:</strong> {details.maxBudget} </div>
+            <div classname="detail"><strong>Max Budget: $</strong>{details.maxBudget} </div>
             <div classname="detail"> <strong>Gender:</strong> {details.gender}</div>
             <div classname="detail"> <strong>About Me:</strong> {details.bio}</div>
             <div classname="detail"> <strong>Additional Notes:</strong> {details.important}</div>
