@@ -1,6 +1,10 @@
 .error {
     height: 40%; 
     width: 40%; 
+    margin-top: 0; 
+    &:hover {
+        transform: none;   
+    }
 }
 
 .error-container {
@@ -11,3 +15,4 @@
     font-size: 2em;
     margin-bottom: 0; 
 }
+
