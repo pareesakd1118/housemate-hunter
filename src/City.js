@@ -1,15 +1,14 @@
-import { useId } from "react"
+
 import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
-import sampleData from './sampledata'
 import FilterBar from './FilterBar';
 
-export default function City({userInfo, setUserData }){
+export default function City({userInfo, setUserData, allData}){
 let cityDetail = useParams().city
 
 const handleFilterChange = (filters) => {
-    const filteredUsers = sampleData.filter(user => {
+    const filteredUsers = allData.filter(user => {
         const filterConditions = [
             filters.gender ? user.gender === filters.gender : true,
             filters.hasPets ? (filters.hasPets === 'yes' ? user.hasPets : !user.hasPets) : true,
@@ -26,13 +25,10 @@ const handleFilterChange = (filters) => {
 setUserData(filteredUsers)
 }
 function resetFilters() {
-    setUserData(sampleData.filter(user => {
+
+    setUserData(allData.filter(user => {
         return user.city === cityDetail; 
-        // setGender("")
-        // setHasPets("")
-        // setIsSmoker("")
-        // setAgeMax("")
-        // setBudgetRange("")
+        
     }))
 }
 const allUsers = userInfo.map(user => {
@@ -52,7 +48,7 @@ const allUsers = userInfo.map(user => {
 
     return (
         <div>
-<FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters}/>
+<FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
         <div className='roommate-container'>
             {allUsers} 
         </div>
