@@ -3,6 +3,7 @@ import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
+import PropTypes from "prop-types";
 
 export default function City({userInfo, setUserData, allData}){
 let cityDetail = useParams().city
@@ -56,3 +57,31 @@ const allUsers = userInfo.map(user => {
         
     )
 }
+
+City.propTypes = {
+    userInfo: PropTypes.arrayOf(
+        PropTypes.shape({
+            key: PropTypes.number.isRequired,
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            image: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    setUserData: PropTypes.func.isRequired,
+    allData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            isSmoker: PropTypes.bool.isRequired,
+            hasPets: PropTypes.bool.isRequired,
+            maxBudget: PropTypes.number.isRequired,
+            gender: PropTypes.string.isRequired,
+            bio: PropTypes.string,
+            important: PropTypes.string,
+            image: PropTypes.string.isRequired,
+        })
+    ).isRequired
+  };
+
