@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from "prop-types";
 
 export default function FilterBar({onApplyFilters, resetFilters}) {
 
@@ -63,3 +64,7 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
     )    
 };
 
+FilterBar.propTypes = {
+    onApplyFilters: PropTypes.func.isRequired,
+    resetFilters: PropTypes.func.isRequired
+}

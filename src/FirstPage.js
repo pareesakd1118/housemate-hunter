@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export default function FirstPage({filterByCity}){
 
@@ -20,3 +21,8 @@ function handleSubmit(event){
     
     )
 }           
+
+
+FirstPage.propTypes = {
+    filterByCity: PropTypes.func.isRequired,
+};
