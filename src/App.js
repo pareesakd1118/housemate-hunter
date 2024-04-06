@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import RoommateDetail from './RoommateDetail';
+import NotFound from './NotFound';
 
 function App() {
   const [allData, setAllData] = useState([])
@@ -39,7 +40,7 @@ function App() {
         <Route path='/roommates/:city' element={<City userInfo={userData} setUserData={setUserData} allData={allData}/>}/>
         <Route path='/' element={<FirstPage filterByCity={filterByCity} setUserData={setUserData}/>} />
         <Route path='/roommates/details/:id' element={<RoommateDetail allData={allData}/>} />
-
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

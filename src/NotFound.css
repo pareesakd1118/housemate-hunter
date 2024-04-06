@@ -1,0 +1,13 @@
+.error {
+    height: 40%; 
+    width: 40%; 
+}
+
+.error-container {
+    background-color: #eec0c8;
+}
+
+.error-header {
+    font-size: 2em;
+    margin-bottom: 0; 
+}
