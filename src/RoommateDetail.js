@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import sampleData from './sampledata.js';
+
 import { useParams } from 'react-router-dom';
 
-function RoommateDetails ( {sampleData} ) {
+function RoommateDetails ( {allData} ) {
 
     const { id } = useParams();
-    const details = sampleData.find(user => user.id.toString() === id);
+    const details = allData.find(user => user.id.toString() === id);
 
     if (!details) {
         return <div>No user found</div>
@@ -32,16 +30,3 @@ function RoommateDetails ( {sampleData} ) {
 
 export default RoommateDetails;
 
-/*   {
-    name: 'Isabella Davis',
-    age: 28,
-    isSmoker: false,
-    hasPets: true,
-    maxBudget: 3450,
-    gender: 'non-binary',
-    image: 'src/images/image9.png',
-    city: 'San Francisco',
-    id: 1
-    bio:
-    important:
-  }, */

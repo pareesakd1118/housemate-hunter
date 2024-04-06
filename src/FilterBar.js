@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import sampleData from './sampledata';
-import { useNavigate, useParams } from 'react-router-dom'
 
-
-export default function FilterBar({onApplyFilters, setUserData, resetFilters}) {
+export default function FilterBar({onApplyFilters, resetFilters}) {
 
     const [gender, setGender] = useState("")
     const [hasPets, setHasPets] = useState('');
@@ -11,9 +8,6 @@ export default function FilterBar({onApplyFilters, setUserData, resetFilters}) {
     const [ageMax, setAgeMax] = useState('');
     const [budgetRange, setBudgetRange] = useState('');
 
-    const navigate = useNavigate();
-
-    
     const handleApplyFilterClick = () => {
         onApplyFilters({
             gender,
@@ -28,7 +22,7 @@ export default function FilterBar({onApplyFilters, setUserData, resetFilters}) {
     return (
         <div>
             <select onChange={event => setGender(event.target.value)} id="gender-field" name="gender-field">
-                <option disabled selected value="">Gender</option>
+                <option value="">Gender</option>
                 <option value={"male"}>Male</option>
                 <option value={"female"}>Female</option>  
                 <option value={"non-binary"}>Non-Binary</option> 

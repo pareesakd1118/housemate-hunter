@@ -1,8 +1,3 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import sampleData from './sampledata.js';
-import { useNavigate } from 'react-router-dom';
-
 
 export default function FirstPage({filterByCity}){
 
