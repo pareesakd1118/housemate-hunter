@@ -2,12 +2,11 @@ import './App.css';
 import NavBar from './NavBar';
 import City from './City';
 import FirstPage from './FirstPage'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import RoommateDetail from './RoommateDetail';
 import NotFound from './NotFound';
-import ErrorMessage from './ErrorMessage';
 
 function App() {
   const [allData, setAllData] = useState([])

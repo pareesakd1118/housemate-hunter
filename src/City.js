@@ -4,10 +4,12 @@ import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
 import {useEffect, useState} from 'react';
+import ErrorMessage from './ErrorMessage';
+import NotFound from './NotFound';
 
 export default function City({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
-
+console.log('userinfo:', userInfo)
 let cityDetail = useParams().city
 
 useEffect(() => {
@@ -29,7 +31,6 @@ useEffect(() => {
     })
     .catch(error => {
       setError(error.message)
-
     })
   }
 
@@ -56,6 +57,17 @@ function resetFilters() {
         return user.city === cityDetail; 
         
     }))
+}
+
+if(error){
+    return (
+        <ErrorMessage error={error}/>
+    )
+}
+if(userInfo.length === 0){
+    return (
+        <NotFound />
+    )
 }
 const allUsers = userInfo.map(user => {
     
