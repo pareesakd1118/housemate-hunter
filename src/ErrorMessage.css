@@ -8,9 +8,11 @@
 }
 
 .error-img {
-    height: 500px; 
-    width: 500px; 
+    height: 400px; 
+    width: 400px; 
     margin-top: 0; 
+    margin-bottom: 2%; 
+    cursor: default; 
     &:hover {
         transform: none;   
     }

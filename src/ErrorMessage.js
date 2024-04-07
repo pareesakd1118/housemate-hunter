@@ -1,5 +1,6 @@
 import Error from '../src/assets/error.png';
 import './ErrorMessage.css';
+import { Link } from 'react-router-dom';
 
 export default function ErrorMessage({error}){
 
@@ -7,6 +8,9 @@ export default function ErrorMessage({error}){
         <div className='error-page'>
             <h1 className='error-text'>{error}</h1>
             <img className='error-img' src={Error} />
+            <div>
+                <Link to={'/'}><button className='home-button'>Back to Homepage</button></Link>
+            </div>
         </div>
     )
 }

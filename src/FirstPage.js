@@ -1,11 +1,8 @@
 
 export default function FirstPage({filterByCity}){
 
- 
-
 function handleSubmit(event){
     event.preventDefault()
-
     filterByCity(event)
 }
 
@@ -17,8 +14,5 @@ function handleSubmit(event){
                 <option value={"Denver"}>Denver</option>  
             </select>
         </div>
-
-            
-    
     )
 }           

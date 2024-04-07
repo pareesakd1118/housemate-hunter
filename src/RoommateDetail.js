@@ -1,6 +1,5 @@
 
 import { useParams } from 'react-router-dom';
-import NotFound from './NotFound';
 
 function RoommateDetails ( {allData} ) {
 
@@ -9,10 +8,9 @@ function RoommateDetails ( {allData} ) {
 
     if (!details) {
         return (
-            <NotFound />
+            <h1>No user found.</h1>
         )
     }
-
 
     return (
         <div className="roommate-details">
@@ -26,7 +24,6 @@ function RoommateDetails ( {allData} ) {
             <div className="profile-image"> 
                 <img src = {details.image} alt={`Profile pic for ${details.name}`}/>
             </div>
-
         </div>
     )
 }

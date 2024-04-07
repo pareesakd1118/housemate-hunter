@@ -9,8 +9,7 @@ export default function NotFound(){
             <img className='error' src={Error} />
             <div>
               <Link to={'/'}><button className='home-button'>Back to Homepage</button></Link>  
-            </div>
-            
+            </div>      
         </div>
     )
 }

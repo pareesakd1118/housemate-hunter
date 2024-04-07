@@ -16,8 +16,7 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
             isSmoker,
             ageMax,
             budgetRange,
-        })
-        
+        })    
     };
 
     return (

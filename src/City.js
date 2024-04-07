@@ -13,14 +13,12 @@ const [error, setError] = useState('')
 const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
 
-
 useEffect(() => {
     getData()
+}, [])
 
-  }, [])
-
-  function getData(){
-    fetch('http://localhost:3001/api/v1/roommates')
+function getData(){
+    fetch('http://localhost:3001/api/v1/roommate')
     .then(res => {
       if(!res.ok){
         throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
@@ -34,8 +32,7 @@ useEffect(() => {
         setLoading('true')
     })
     .catch(error => {
-      setError(error.message)
-
+        setError(error.message)
     })
   }
 
@@ -54,13 +51,12 @@ const handleFilterChange = (filters) => {
         return filterConditions.every(condition => condition === true);
     });
 
-setUserData(filteredUsers.filter(user => user.city === cityDetail))
+    setUserData(filteredUsers.filter(user => user.city === cityDetail))
 }
-function resetFilters() {
 
+function resetFilters() {
     setUserData(allData.filter(user => {
         return user.city === cityDetail; 
-        
     }))
 }
 
@@ -70,21 +66,14 @@ if(error){
     )
 }
 
-if(!userInfo.length){
-    return (
-        <NotFound />
-    )
-}
 if(!loading){
     return (
         <Loading />
     )
 }
 
-
-    const allUsers = userInfo.map(user => {
-    
-            return (
+const allUsers = userInfo.map(user => {
+    return (
         <Card
             key={user.id}
             id={user.id}
@@ -93,18 +82,21 @@ if(!loading){
             image={user.image}
         />
     )
-
-    })
-
-
-    return (
+})
+    
+if(userInfo.length){
+    return (  
         <div>
-<FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
-        <div className='roommate-container'>
+             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
+            <div className='roommate-container'>
             {allUsers} 
+            </div>
         </div>
-        </div>
-        
-    )
+        )
+    } else {
+        return (
+            <NotFound />
+        )
+    }
 }
 

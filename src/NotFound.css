@@ -1,6 +1,7 @@
 .error {
     height: 400px; 
     width: 450px; 
+    cursor: default; 
     &:hover {
         transform: none;   
     }
@@ -18,10 +19,11 @@
 
 .home-button {
     margin-top: 4%; 
-    border-radius: 15px;
-    border: none; 
+    border-radius: 20px;
+    background-color: #F4B2B0;
+    border: solid 4px #B3404A; 
     width: 250px;
-    height: 30px; 
+    height: 35px; 
     font-size: larger;
     cursor: pointer; 
 }

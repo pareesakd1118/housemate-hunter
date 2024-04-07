@@ -11,7 +11,6 @@ import NotFound from './NotFound';
 function App() {
   const [allData, setAllData] = useState([])
   const [userData, setUserData] = useState(allData)
- 
   const navigate = useNavigate();
 
   function filterByCity(event){
@@ -22,7 +21,7 @@ function App() {
     navigate(`/roommates/${event.target.value}`)
   }
 
-    return (
+  return (
     <div className="App">
       <NavBar />
       <Routes>
