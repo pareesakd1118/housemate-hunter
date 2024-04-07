@@ -1,5 +1,6 @@
 
 import { useParams } from 'react-router-dom';
+import NotFound from './NotFound';
 
 function RoommateDetails ( {allData} ) {
 
@@ -7,7 +8,9 @@ function RoommateDetails ( {allData} ) {
     const details = allData.find(user => user.id.toString() === id);
 
     if (!details) {
-        return <div>No user found</div>
+        return (
+            <NotFound />
+        )
     }
 
 
