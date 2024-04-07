@@ -6,14 +6,17 @@ import FilterBar from './FilterBar';
 import {useEffect, useState} from 'react';
 import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
+import Loading from './Loading';
 
 export default function City({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
-console.log('userinfo:', userInfo)
+const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
+
 
 useEffect(() => {
     getData()
+
   }, [])
 
   function getData(){
@@ -28,9 +31,11 @@ useEffect(() => {
     .then(data => {
         setUserData(data.filter(user => user.city === cityDetail))
         setAllData(data)
+        setLoading('true')
     })
     .catch(error => {
       setError(error.message)
+
     })
   }
 
@@ -64,12 +69,20 @@ if(error){
         <ErrorMessage error={error}/>
     )
 }
-if(userInfo.length === 0){
+
+if(!userInfo.length){
     return (
         <NotFound />
     )
 }
-const allUsers = userInfo.map(user => {
+if(!loading){
+    return (
+        <Loading />
+    )
+}
+
+
+    const allUsers = userInfo.map(user => {
     
             return (
         <Card
@@ -94,3 +107,4 @@ const allUsers = userInfo.map(user => {
         
     )
 }
+

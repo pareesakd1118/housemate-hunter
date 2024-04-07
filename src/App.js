@@ -26,8 +26,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path='/roommates/:city' element={<City userInfo={userData} setUserData={setUserData} allData={allData} setAllData={setAllData}/>}/>
         <Route path='/' element={<FirstPage filterByCity={filterByCity} setUserData={setUserData}/>} />
+        <Route path='/roommates/:city' element={<City userInfo={userData} setUserData={setUserData} allData={allData} setAllData={setAllData}/>}/>
         <Route path='/roommates/details/:id' element={<RoommateDetail allData={allData}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
