@@ -7,11 +7,13 @@ import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import RoommateDetail from './RoommateDetail';
 import NotFound from './NotFound';
+import ErrorMessage from './ErrorMessage';
 
 function App() {
   const [allData, setAllData] = useState([])
   const [userData, setUserData] = useState(allData)
-  
+  const [error, setError] = useState('')
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,9 +21,19 @@ function App() {
   }, [])
 
   function getData(){
-    fetch('http://localhost:3001/api/v1/roommates')
-    .then(res => res.json())
+    fetch('http://localhost:3001/api/v1/roommate')
+    .then(res => {
+      if(!res.ok){
+        throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
+      } else {
+        return res.json()
+      }
+    })
     .then(data => setAllData(data))
+    .catch(error => {
+      setError(error.message)
+      console.log(error)
+    })
   }
 
 
@@ -33,7 +45,12 @@ function App() {
     navigate(`/roommates/${event.target.value}`)
   }
 
-  return (
+  if(error){
+    return (
+      <ErrorMessage error={error}/>
+    )
+  } else {
+      return (
     <div className="App">
       <NavBar />
       <Routes>
@@ -43,7 +60,10 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
-  );
+  )
+  }
+
+;
 }
 
 export default App;
