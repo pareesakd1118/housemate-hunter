@@ -1,6 +1,8 @@
 
 export default function FirstPage({filterByCity}){
 
+ 
+
 function handleSubmit(event){
     event.preventDefault()
 

@@ -3,9 +3,35 @@ import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
+import {useEffect, useState} from 'react';
 
-export default function City({userInfo, setUserData, allData}){
+export default function City({userInfo, setUserData, allData, setAllData}){
+const [error, setError] = useState('')
+
 let cityDetail = useParams().city
+
+useEffect(() => {
+    getData()
+  }, [])
+
+  function getData(){
+    fetch('http://localhost:3001/api/v1/roommates')
+    .then(res => {
+      if(!res.ok){
+        throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
+      } else {
+        return res.json()
+      }
+    })
+    .then(data => {
+        setUserData(data.filter(user => user.city === cityDetail))
+        setAllData(data)
+    })
+    .catch(error => {
+      setError(error.message)
+
+    })
+  }
 
 const handleFilterChange = (filters) => {
     const filteredUsers = allData.filter(user => {
@@ -22,7 +48,7 @@ const handleFilterChange = (filters) => {
         return filterConditions.every(condition => condition === true);
     });
 
-setUserData(filteredUsers)
+setUserData(filteredUsers.filter(user => user.city === cityDetail))
 }
 function resetFilters() {
 
