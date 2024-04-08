@@ -1,0 +1,26 @@
+.house {
+    width: 200px; 
+    height: 200px;
+    margin-top: 3%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .house {
+      animation: house-spin infinite 10s linear;
+    }
+  }
+
+  @keyframes house-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.loading-container {
+    background-color: #A3C1AD;
+    height: 100vh; 
+}
+  

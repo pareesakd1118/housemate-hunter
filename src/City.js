@@ -3,10 +3,42 @@ import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
+
+import {useEffect, useState} from 'react';
+import ErrorMessage from './ErrorMessage';
+import NotFound from './NotFound';
+import Loading from './Loading';
+
 import PropTypes from "prop-types";
 
-export default function City({userInfo, setUserData, allData}){
+
+export default function City({userInfo, setUserData, allData, setAllData}){
+const [error, setError] = useState('')
+const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
+
+useEffect(() => {
+    getData()
+}, [])
+
+function getData(){
+    fetch('http://localhost:3001/api/v1/roommates')
+    .then(res => {
+      if(!res.ok){
+        throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
+      } else {
+        return res.json()
+      }
+    })
+    .then(data => {
+        setUserData(data.filter(user => user.city === cityDetail))
+        setAllData(data)
+        setLoading('true')
+    })
+    .catch(error => {
+        setError(error.message)
+    })
+  }
 
 const handleFilterChange = (filters) => {
     const filteredUsers = allData.filter(user => {
@@ -23,18 +55,29 @@ const handleFilterChange = (filters) => {
         return filterConditions.every(condition => condition === true);
     });
 
-setUserData(filteredUsers)
+    setUserData(filteredUsers.filter(user => user.city === cityDetail))
 }
-function resetFilters() {
 
+function resetFilters() {
     setUserData(allData.filter(user => {
         return user.city === cityDetail; 
-        
     }))
 }
+
+if(error){
+    return (
+        <ErrorMessage error={error}/>
+    )
+}
+
+if(!loading){
+    return (
+        <Loading />
+    )
+}
+
 const allUsers = userInfo.map(user => {
-    
-            return (
+    return (
         <Card
             key={user.id}
             id={user.id}
@@ -43,19 +86,28 @@ const allUsers = userInfo.map(user => {
             image={user.image}
         />
     )
-
-    })
-
-
-    return (
+})
+    
+if(userInfo.length){
+    return (  
         <div>
-<FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
-        <div className='roommate-container'>
+             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
+            <div className='roommate-container'>
             {allUsers} 
+            </div>
         </div>
+
+        )
+    } else {
+        return (
+            <NotFound />
+        )
+    }
+
         </div>
         
     )
+
 }
 
 City.propTypes = {
@@ -69,6 +121,9 @@ City.propTypes = {
         })
     ).isRequired,
     setUserData: PropTypes.func.isRequired,
+
+    setAllData: PrpoTypes.func.isRequired,
+
     allData: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,

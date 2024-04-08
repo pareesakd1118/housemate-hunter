@@ -1,0 +1,23 @@
+.error-page {
+    background-color: #eec0c8;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    height: 100vh;
+}
+
+.error-img {
+    height: 400px; 
+    width: 400px; 
+    margin-top: 0; 
+    margin-bottom: 2%; 
+    cursor: default; 
+    &:hover {
+        transform: none;   
+    }
+}
+
+.error-text {
+    width: 65%; 
+}

@@ -1,5 +1,9 @@
+
+import React, { useState } from 'react';
+
 import React, { useState } from 'react'
 import PropTypes from "prop-types";
+
 
 export default function FilterBar({onApplyFilters, resetFilters}) {
 
@@ -8,16 +12,16 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
     const [isSmoker, setIsSmoker] = useState('');
     const [ageMax, setAgeMax] = useState('');
     const [budgetRange, setBudgetRange] = useState('');
-
+  
     const handleApplyFilterClick = () => {
+   
         onApplyFilters({
             gender,
             hasPets,
             isSmoker,
             ageMax,
             budgetRange,
-        })
-        
+        })    
     };
 
     return (

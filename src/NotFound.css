@@ -1,0 +1,29 @@
+.error {
+    height: 400px; 
+    width: 450px; 
+    cursor: default; 
+    &:hover {
+        transform: none;   
+    }
+}
+
+.error-container {
+    background-color: #eec0c8;
+    height: 100vh; 
+}
+
+.error-header {
+    font-size: 2em;
+    margin-bottom: 0; 
+}
+
+.home-button {
+    margin-top: 4%; 
+    border-radius: 20px;
+    background-color: #F4B2B0;
+    border: solid 4px #B3404A; 
+    width: 250px;
+    height: 35px; 
+    font-size: larger;
+    cursor: pointer; 
+}
