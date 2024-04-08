@@ -3,10 +3,14 @@ import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
+
 import {useEffect, useState} from 'react';
 import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
+
+import PropTypes from "prop-types";
+
 
 export default function City({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
@@ -92,12 +96,18 @@ if(userInfo.length){
             {allUsers} 
             </div>
         </div>
+
         )
     } else {
         return (
             <NotFound />
         )
     }
+
+        </div>
+        
+    )
+
 }
 
 City.propTypes = {
@@ -111,7 +121,9 @@ City.propTypes = {
         })
     ).isRequired,
     setUserData: PropTypes.func.isRequired,
+
     setAllData: PrpoTypes.func.isRequired,
+
     allData: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
@@ -127,3 +139,4 @@ City.propTypes = {
         })
     ).isRequired
   };
+
