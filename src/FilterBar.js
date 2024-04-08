@@ -63,3 +63,7 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
     )    
 };
 
+FilterBar.propTypes = {
+    onApplyFilters: PropTypes.func.isRequired,
+    resetFilters: PropTypes.func.isRequired
+}

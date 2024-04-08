@@ -18,7 +18,7 @@ useEffect(() => {
 }, [])
 
 function getData(){
-    fetch('http://localhost:3001/api/v1/roommate')
+    fetch('http://localhost:3001/api/v1/roommates')
     .then(res => {
       if(!res.ok){
         throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
@@ -100,3 +100,30 @@ if(userInfo.length){
     }
 }
 
+City.propTypes = {
+    userInfo: PropTypes.arrayOf(
+        PropTypes.shape({
+            key: PropTypes.number.isRequired,
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            image: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    setUserData: PropTypes.func.isRequired,
+    setAllData: PrpoTypes.func.isRequired,
+    allData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            isSmoker: PropTypes.bool.isRequired,
+            hasPets: PropTypes.bool.isRequired,
+            maxBudget: PropTypes.number.isRequired,
+            gender: PropTypes.string.isRequired,
+            bio: PropTypes.string,
+            important: PropTypes.string,
+            image: PropTypes.string.isRequired,
+        })
+    ).isRequired
+  };

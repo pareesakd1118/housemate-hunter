@@ -16,3 +16,7 @@ function handleSubmit(event){
         </div>
     )
 }           
+
+FirstPage.propTypes = {
+    filterByCity: PropTypes.func.isRequired,
+};

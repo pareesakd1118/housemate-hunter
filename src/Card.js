@@ -11,3 +11,10 @@ export default function Card({ id, image, name, age }){
       </Link>
     )
 }
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired
+}

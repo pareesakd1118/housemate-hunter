@@ -30,3 +30,19 @@ function RoommateDetails ( {allData} ) {
 
 export default RoommateDetails;
 
+RoommateDetails.propTypes = {
+    allData: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            isSmoker: PropTypes.bool.isRequired,
+            hasPets: PropTypes.bool.isRequired,
+            maxBudget: PropTypes.number.isRequired,
+            gender: PropTypes.string.isRequired,
+            bio: PropTypes.string,
+            important: PropTypes.string,
+            image: PropTypes.string.isRequired,
+        })
+    )
+}

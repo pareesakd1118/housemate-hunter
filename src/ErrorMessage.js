@@ -1,6 +1,7 @@
 import Error from '../src/assets/error.png';
 import './ErrorMessage.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function ErrorMessage({error}){
 
@@ -13,4 +14,8 @@ export default function ErrorMessage({error}){
             </div>
         </div>
     )
+}
+
+ErrorMessage.propTypes = {
+    error: PropTypes.string.isRequired
 }
