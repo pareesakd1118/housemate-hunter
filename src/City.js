@@ -1,16 +1,12 @@
-
 import Card from "./Card"
 import './City.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
-
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
-
 import PropTypes from "prop-types";
-
 
 export default function City({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
@@ -22,7 +18,7 @@ useEffect(() => {
 }, [])
 
 function getData(){
-    fetch('http://localhost:3001/api/v1/roommates')
+    fetch('http://localhost:3001/api/v1/roommates/')
     .then(res => {
       if(!res.ok){
         throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
@@ -91,9 +87,9 @@ const allUsers = userInfo.map(user => {
 if(userInfo.length){
     return (  
         <div>
-             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
+            <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
             <div className='roommate-container'>
-            {allUsers} 
+                {allUsers} 
             </div>
         </div>
 
@@ -103,11 +99,6 @@ if(userInfo.length){
             <NotFound />
         )
     }
-
-        </div>
-        
-    )
-
 }
 
 City.propTypes = {
@@ -122,7 +113,7 @@ City.propTypes = {
     ).isRequired,
     setUserData: PropTypes.func.isRequired,
 
-    setAllData: PrpoTypes.func.isRequired,
+    setAllData: PropTypes.func.isRequired,
 
     allData: PropTypes.arrayOf(
         PropTypes.shape({

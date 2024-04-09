@@ -1,0 +1,28 @@
+.first-page {
+    padding-top: 2%;
+}
+
+.city-select-field {
+    width: 50%;
+    border-radius: 20px;
+}
+
+.sf-den-div {
+    display: flex;
+    justify-content: center;
+}
+
+.city-image {
+    width: 70vh;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sf-div {
+    margin-right: 1%
+}
+
+.den-div {
+    margin-left: 1%
+}

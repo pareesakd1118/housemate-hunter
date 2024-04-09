@@ -1,0 +1,50 @@
+.filterbar-div {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+button {
+    background-color: #ccc; 
+    color: #fff;     
+    padding: 10px 20px;
+    border-radius: 5px; 
+    border: 1.5px solid rgb(113, 113, 113); 
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+    
+button:hover {
+    background-color: #80b592; 
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer
+}
+
+select, input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    width: 10%;
+    height: 50%;
+}
+
+.select-div, .button-div {
+    display: flex;
+    justify-content: center;
+    gap: 0.5%;
+    margin-bottom: 1%
+}
+
+.divider {
+    height: 2px;
+    background-color: #ccc; 
+    width: 95%; 
+    margin: 0 auto; 
+  }
+  
