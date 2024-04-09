@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import "./FirstPage.css"
+import Footer from "./Footer"
 
 export default function FirstPage({filterByCity}){
 
@@ -26,6 +27,7 @@ function handleSubmit(event){
                     <h3>Denver, CO</h3>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }           

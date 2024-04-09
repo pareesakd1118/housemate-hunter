@@ -42,9 +42,9 @@ select, input {
 }
 
 .divider {
-    height: 2px;
+    height: 1px;
     background-color: #ccc; 
     width: 95%; 
     margin: 0 auto; 
-  }
+}
   

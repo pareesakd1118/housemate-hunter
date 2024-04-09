@@ -7,6 +7,7 @@ import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
 import PropTypes from "prop-types";
+import Footer from "./Footer"
 
 export default function City({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
@@ -91,6 +92,7 @@ if(userInfo.length){
             <div className='roommate-container'>
                 {allUsers} 
             </div>
+            <Footer />
         </div>
 
         )
