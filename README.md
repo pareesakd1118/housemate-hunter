@@ -17,9 +17,12 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
 
 ## Context 
 - Goals:
-  - Research and implement a "strech" technology into the application.
+  - Research and implement a "stretch" technology into the application.
+  - Continued work with implementing router with a React application.
+  - Continued work with E2E testing with Cypress. 
 - Wins:
-  - Used Express, Knex, and PostgreSQL to build a server/database for the first time! 
+  - Used Express, Knex, and PostgreSQL to build a server/database for the first time!
+  - Implemented loading indicators when changing URL's and fetching data. 
 - Challenges:
   - Deployment of the backend. 
 
