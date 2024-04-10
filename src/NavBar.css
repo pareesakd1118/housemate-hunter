@@ -1,0 +1,19 @@
+h1 {
+    font-size: 3em;
+    color: #000000;;
+}
+
+.logo-house {
+    height: 50px;
+    margin-top: 3%;
+    margin-right: 1%
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(204, 204, 204);
+    padding-bottom: 0;
+    background-color: #80b592;
+}
