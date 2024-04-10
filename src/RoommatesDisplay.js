@@ -9,17 +9,16 @@ import NotFound from './NotFound';
 import Loading from './Loading';
 import PropTypes from "prop-types";
 
-
 export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
 const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
 
 useEffect(() => {
-    getData()
+    getAllRoommates()
 }, [])
 
-function getData(){
+function getAllRoommates(){
     fetch('http://localhost:3001/api/v1/roommates')
     .then(res => {
       if(!res.ok){
@@ -88,9 +87,9 @@ if(userInfo.length){
     return (  
         <div>
             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
-            <main className='roommate-container'>
+            <section className='roommate-container'>
             {allUsers} 
-            </main>
+            </section>
         </div>
     )
     } else {

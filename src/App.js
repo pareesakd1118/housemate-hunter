@@ -20,7 +20,7 @@ export default function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <NavBar />
       <Routes>
         <Route path='/' element={<CitySelection filterByCity={filterByCity} setUserData={setUserData}/>} />
@@ -28,7 +28,7 @@ export default function App() {
         <Route path='/roommates/details/:id' element={<RoommateDetail allData={allData}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-    </div>
+    </main>
   )
 }
 

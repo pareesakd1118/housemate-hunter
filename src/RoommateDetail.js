@@ -10,7 +10,7 @@ export default function RoommateDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchSpecificRoommate = async () => {
       setLoading(true);
       try {
         const response = await fetch(`http://localhost:3001/api/v1/roommates/${id}`);
@@ -30,7 +30,7 @@ export default function RoommateDetails() {
       }
     };
 
-    fetchData();
+    fetchSpecificRoommate();
   }, [id]);
 
   if (loading) {
