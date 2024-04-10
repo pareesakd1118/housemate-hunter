@@ -11,6 +11,17 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
 ## Preview
 
 ## Installation Instructions
+Cypress Testing:
+1. `git clone git@github.com:Virulencies/housemate-hunter-api.git`
+2. `cd housemate-hunter-api`
+3. `node server.js`
+4. Fork and clone this repo: https://github.com/pareesakd1118/housemate-hunter
+5. `cd housemate-hunter`
+6. `npm start`
+7. `npm i -D cypress`
+8. Ensure package.json includes the following:
+`{ "scripts": {"cypress": "cypress open"} }`
+9. `npm run cypress`
 
 ## Technologies Used
 ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat) ![React Router Badge](https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat) ![Cypress Badge](https://img.shields.io/badge/Cypress-69D3A7?logo=cypress&logoColor=fff&style=flat) ![Express Badge](https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=flat) ![Knex.js Badge](https://img.shields.io/badge/Knex.js-D26B38?logo=knexdotjs&logoColor=fff&style=flat) ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=flat) ![Nodemon Badge](https://img.shields.io/badge/Nodemon-76D04B?logo=nodemon&logoColor=fff&style=flat)
@@ -22,7 +33,8 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
   - Continued work with E2E testing with Cypress. 
 - Wins:
   - Used Express, Knex, and PostgreSQL to build a server/database for the first time!
-  - Implemented loading indicators when changing URL's and fetching data. 
+  - Implemented loading indicators when changing URL's and fetching data.
+  - Implementing an apply filter function to filter roommates based on a number of preferences, including if the user smokes, has a pet, and budget. 
 - Challenges:
   - Deployment of the backend. 
 
