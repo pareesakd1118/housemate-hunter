@@ -26,3 +26,19 @@
 .den-div {
     margin-left: 1%
 }
+
+@media screen and (max-width: 1023px) {
+    .sf-den-div {
+        flex-direction: column;
+    }
+}
+  
+@media screen and (max-width: 767px) {
+    .sf-den-div {
+        flex-direction: column;
+    }
+    .city-image {
+        width: 40vh;
+        height: 28vh;
+    }
+}
