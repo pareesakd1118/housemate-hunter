@@ -4,7 +4,8 @@ a {
 }
 
 .grid-image {
-    height: 50vh; 
+    height: 40vh;
+    width: 30vh; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer; 
     margin-top: 2%; 
