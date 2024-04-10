@@ -21,7 +21,7 @@ describe('FirstPage Component', () => {
     cy.get('.roommate-container').first().contains('Jenny');
     cy.get('.roommate-container').should('have.length', 1);
   });
- 
+
   it('shows error message to user when page is not found', () => {
     cy.intercept('GET', '/api/v1/roommates', {
       statusCode: 404, 
@@ -30,4 +30,10 @@ describe('FirstPage Component', () => {
     cy.visit('http://localhost:3000/roommates/sdfasdfa');
     cy.get('h1').contains('404')
  })
+
+ it('shows single roommate when click on image', () => {[
+    cy.intercept('GET', '/api/v1/roommates/1', { fixture: 'roommate.json' }).as('getRoommateDetails'),
+    cy.get('.grid-image').first().click()
+    .url().should('eq', 'http://localhost:3000/roommates/details/1')
+  ]})
 });
