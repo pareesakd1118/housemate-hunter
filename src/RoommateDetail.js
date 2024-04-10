@@ -1,69 +1,65 @@
-
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types'
 
-function RoommateDetails ( {allData} ) {
+function RoommateDetails() {
+  const [details, setDetails] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { id } = useParams();
 
-    const { id } = useParams();
-    const details = allData.find(user => user.id.toString() === id);
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(`http://localhost:3001/api/v1/roommates/${id}`);
+        console.log('Raw response:', response);
 
-    if (!details) {
-        return (
-            <h1>No user found.</h1>
-        )
-    }
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('Data:', data);
 
-    return (
-        <div className="roommate-details">
-            <h2>{details.name}, {details.age}</h2>
-            <div className="detail"><strong>Smoker:</strong> {details.isSmoker ? 'Yes' : 'No'} </div>
-            <div className="detail"><strong>Pets:</strong> {details.hasPets ? 'Yes' : 'No'} </div>
-            <div className="detail"><strong>Max Budget: $</strong>{details.maxBudget} </div>
-            <div className="detail"> <strong>Gender:</strong> {details.gender}</div>
-            <div className="detail"> <strong>About Me:</strong> {details.bio}</div>
-            <div className="detail"> <strong>Additional Notes:</strong> {details.important}</div>
-            <div className="profile-image"> 
-                <img src = {details.image} alt={`Profile pic for ${details.name}`}/>
-            </div>
-        </div>
-    )
+        setDetails(data[0]);
+        setError(null);
+      } catch (error) {
+        console.error("Fetching data failed", error);
+        setError(error.message);
+        setDetails(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Error fetching data: {error}</h1>;
+  }
+
+  if (!details) {
+    return <h1>No user found.</h1>;
+  }
+
+  return (
+    <div className="roommate-details">
+      <h2>{details.name}, {details.age}</h2>
+      <div className="detail"><strong>Smoker:</strong> {details.isSmoker ? 'Yes' : 'No'} </div>
+      <div className="detail"><strong>Pets:</strong> {details.hasPets ? 'Yes' : 'No'} </div>
+      <div className="detail"><strong>Max Budget: $</strong>{details.maxBudget} </div>
+      <div className="detail"> <strong>Gender:</strong> {details.gender}</div>
+      <div className="detail"> <strong>About Me:</strong> {details.bio}</div>
+      <div className="detail"> <strong>Additional Notes:</strong> {details.important}</div>
+      <div className="profile-image"> 
+          <img src={details.image} alt={`Profile pic for ${details.name}`} />
+      </div>
+    </div>
+  );
 }
-
-RoommateDetails.propTypes = {
-    allData: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired,
-            age: PropTypes.number.isRequired,
-            isSmoker: PropTypes.bool.isRequired,
-            hasPets: PropTypes.bool.isRequired,
-            maxBudget: PropTypes.number.isRequired,
-            gender: PropTypes.string.isRequired,
-            bio: PropTypes.string,
-            important: PropTypes.string,
-            image: PropTypes.string.isRequired,
-        })
-    )
-}
-
-
-RoommateDetails.propTypes = {
-    allData: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired,
-            age: PropTypes.number.isRequired,
-            isSmoker: PropTypes.bool.isRequired,
-            hasPets: PropTypes.bool.isRequired,
-            maxBudget: PropTypes.number.isRequired,
-            gender: PropTypes.string.isRequired,
-            bio: PropTypes.string,
-            important: PropTypes.string,
-            image: PropTypes.string.isRequired,
-        })
-    )
-}
-
 
 export default RoommateDetails;
-
