@@ -8,6 +8,7 @@ import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
 import PropTypes from "prop-types";
+import Footer from './Footer';
 
 export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
@@ -90,6 +91,7 @@ if(userInfo.length){
             <section className='roommate-container'>
             {allUsers} 
             </section>
+            <Footer />
         </div>
     )
     } else {
