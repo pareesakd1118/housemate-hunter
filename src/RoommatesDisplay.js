@@ -1,27 +1,24 @@
 
 import Card from "./Card"
-import './City.css'
+import './RoommatesDisplay.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
-
 import {useEffect, useState} from 'react';
 import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
-
 import PropTypes from "prop-types";
 
-
-export default function City({userInfo, setUserData, allData, setAllData}){
+export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
 const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
 
 useEffect(() => {
-    getData()
+    getAllRoommates()
 }, [])
 
-function getData(){
+function getAllRoommates(){
     fetch('http://localhost:3001/api/v1/roommates')
     .then(res => {
       if(!res.ok){
@@ -59,9 +56,7 @@ const handleFilterChange = (filters) => {
 }
 
 function resetFilters() {
-    setUserData(allData.filter(user => {
-        return user.city === cityDetail; 
-    }))
+    setUserData(allData.filter(user => user.city === cityDetail))
 }
 
 if(error){
@@ -91,13 +86,12 @@ const allUsers = userInfo.map(user => {
 if(userInfo.length){
     return (  
         <div>
-             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
-            <div className='roommate-container'>
+            <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
+            <section className='roommate-container'>
             {allUsers} 
-            </div>
+            </section>
         </div>
-
-        )
+    )
     } else {
         return (
             <NotFound />
@@ -105,7 +99,7 @@ if(userInfo.length){
     }
 }
 
-City.propTypes = {
+RoommatesDisplay.propTypes = {
     userInfo: PropTypes.arrayOf(
         PropTypes.shape({
             key: PropTypes.number.isRequired,
