@@ -56,4 +56,7 @@ select, input {
         flex-direction: column;
         align-items: center;
     }
+    select, input, button {
+        margin-bottom: 1%;
+    }
 }
