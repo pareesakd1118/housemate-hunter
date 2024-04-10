@@ -1,7 +1,7 @@
 describe('FirstPage Component', () => {
   beforeEach(() => {
     cy.intercept('GET', '/api/v1/roommates', { fixture: 'roommates.json' }).as('getAllRoommates');
-    cy.visit('http://localhost:3002/roommates/San%20Francisco'); 
+    cy.visit('http://localhost:3000/roommates/San%20Francisco'); 
   });
 
   it('shows city roommates and that FilterBar dropdowns are present', () => {
@@ -27,13 +27,13 @@ describe('FirstPage Component', () => {
       statusCode: 404, 
       fixture: 'roommates.json'
     })
-    cy.visit('http://localhost:3002/roommates/sdfasdfa');
+    cy.visit('http://localhost:3000/roommates/sdfasdfa');
     cy.get('h1').contains('404')
  })
 
  it('shows single roommate when click on image', () => {[
     cy.intercept('GET', '/api/v1/roommates/1', { fixture: 'roommate.json' }).as('getRoommateDetails'),
     cy.get('.grid-image').first().click()
-    .url().should('eq', 'http://localhost:3002/roommates/details/1')
+    .url().should('eq', 'http://localhost:3000/roommates/details/1')
   ]})
 });

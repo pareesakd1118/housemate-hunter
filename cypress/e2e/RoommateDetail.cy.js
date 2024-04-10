@@ -2,7 +2,7 @@ describe('RoommateDetails Component', () => {
   it('displays the name and image of the roommate after navigation', () => {
     cy.intercept('GET', '/api/v1/roommates/1', { fixture: 'roommate.json' }).as('getRoommateDetails');
     cy.intercept('GET', '/api/v1/roommates', { fixture: 'roommates.json' }).as('getAllRoommates');
-    cy.visit('http://localhost:3002/roommates/details/1');
+    cy.visit('http://localhost:3000/roommates/details/1');
     cy.wait('@getRoommateDetails');
     cy.get('.roommate-details h2').should('contain', 'Isabella Daniels');
     cy.get('.roommate-details .profile-image img')
@@ -17,7 +17,7 @@ describe('RoommateDetails Component', () => {
       statusCode: 404, 
       fixture: 'roommate.json'
     })
-    cy.visit('http://localhost:3002/roommates/details/3333');
+    cy.visit('http://localhost:3000/roommates/details/3333');
     cy.get('h1').contains('404')
  })
 });
