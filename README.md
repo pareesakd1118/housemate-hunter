@@ -17,8 +17,11 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
 
 ## Context 
 - Goals:
+  - Research and implement a "strech" technology into the application.
 - Wins:
+  - Used Express, Knex, and PostgreSQL to build a server/database for the first time! 
 - Challenges:
+  - Deployment of the backend. 
 
 ## Future Improvements 
 - Add a favorites feature to be able to track roommate(s) the user is interested in living with.
