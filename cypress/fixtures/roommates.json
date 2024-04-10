@@ -1,0 +1,47 @@
+[
+    {
+    "id": 251,
+    "name": "Isabella Daniels",
+    "gender": "non-binary",
+    "city": "San Francisco",
+    "bio": "Hi, I'm Isabella, a healthcare hero providing compassionate care in the bustling city of San Francisco. Beyond the hospital walls, I'm exploring local farmers' markets or unwinding with a good book in hand. My workspace is an oasis of tranquility amidst the vibrant energy of the city, reflecting the peace and healing I strive to bring to my patients.",
+    "important": "My foot is currently broken so it is important to me to find a place with an elevator.",
+    "created_at": "2024-04-07T22:55:49.336Z",
+    "updated_at": "2024-04-07T22:55:49.336Z",
+    "age": 28,
+    "isSmoker": false,
+    "hasPets": true,
+    "maxBudget": 3450,
+    "image": "https://images.unsplash.com/photo-1530047198515-516ff90fc4d9?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+    "id": 257,
+    "name": "Jenny Dayton",
+    "gender": "female",
+    "city": "San Francisco",
+    "bio": "Hey, I'm Jen, an outdoor adventurer exploring the boundless wilderness surrounding Denver. Beyond hiking and camping, I'm rock climbing in rugged canyons or whitewater rafting down rushing rivers. In the heart of Colorado's outdoor playground, my basecamp is a haven of adventure, where every expedition is an opportunity to connect with nature and push my limits.",
+    "important": "Having in-unit washer and dryer is a must for me, as well as dishwasher and either a parking garage or in an area with street parking for my car.",
+    "created_at": "2024-04-07T22:55:49.345Z",
+    "updated_at": "2024-04-07T22:55:49.345Z",
+    "age": 37,
+    "isSmoker": false,
+    "hasPets": false,
+    "maxBudget": 3218,
+    "image": "https://images.unsplash.com/photo-1530785602389-07594beb8b73?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+    "id": 262,
+    "name": "Halle Harper",
+    "gender": "female",
+    "city": "San Francisco",
+    "bio": "Hi, I'm Halle, a history buff delving into Denver's rich heritage and storied past. When I'm not visiting museums or historic sites, I'm attending cultural events or exploring vintage neighborhoods. In the heart of the Mile High City, my home office is a portal to the past, where every artifact and archive tells a tale of Denver's fascinating history.",
+    "important": "I have two cats that are partially out-door so a place with a backyard is ideal, also they are not dog friendly - so no one with dogs please!",
+    "created_at": "2024-04-07T22:55:49.347Z",
+    "updated_at": "2024-04-07T22:55:49.347Z",
+    "age": 32,
+    "isSmoker": true,
+    "hasPets": true,
+    "maxBudget": 1774,
+    "image": "https://images.unsplash.com/photo-1496360864286-5dbec8933908?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+]

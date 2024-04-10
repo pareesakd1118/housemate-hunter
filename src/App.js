@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './NavBar';
-import City from './City';
-import FirstPage from './FirstPage'
+import RoommatesDisplay from './RoommatesDisplay';
+import CitySelection from './CitySelection'
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
@@ -23,8 +23,8 @@ export default function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path='/' element={<FirstPage filterByCity={filterByCity} setUserData={setUserData}/>} />
-        <Route path='/roommates/:city' element={<City userInfo={userData} setUserData={setUserData} allData={allData} setAllData={setAllData}/>}/>
+        <Route path='/' element={<CitySelection filterByCity={filterByCity} setUserData={setUserData}/>} />
+        <Route path='/roommates/:city' element={<RoommatesDisplay userInfo={userData} setUserData={setUserData} allData={allData} setAllData={setAllData}/>}/>
         <Route path='/roommates/details/:id' element={<RoommateDetail allData={allData}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>

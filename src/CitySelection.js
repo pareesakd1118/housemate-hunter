@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function FirstPage({filterByCity}){
+export default function CitySelection({filterByCity}){
 
 function handleSubmit(event){
     event.preventDefault()
@@ -18,12 +18,11 @@ function handleSubmit(event){
     )
 }           
 
-
-FirstPage.propTypes = {
+CitySelection.propTypes = {
     filterByCity: PropTypes.func.isRequired,
 };
 
-FirstPage.propTypes = {
+CitySelection.propTypes = {
     filterByCity: PropTypes.func.isRequired,
 };
 

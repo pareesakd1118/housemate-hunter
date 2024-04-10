@@ -1,18 +1,16 @@
 
 import Card from "./Card"
-import './City.css'
+import './RoommatesDisplay.css'
 import { useParams } from 'react-router-dom'
 import FilterBar from './FilterBar';
-
 import {useEffect, useState} from 'react';
 import ErrorMessage from './ErrorMessage';
 import NotFound from './NotFound';
 import Loading from './Loading';
-
 import PropTypes from "prop-types";
 
 
-export default function City({userInfo, setUserData, allData, setAllData}){
+export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
 const [loading, setLoading] = useState(null)
 let cityDetail = useParams().city
@@ -103,7 +101,7 @@ if(userInfo.length){
     }
 }
 
-City.propTypes = {
+RoommatesDisplay.propTypes = {
     userInfo: PropTypes.arrayOf(
         PropTypes.shape({
             key: PropTypes.number.isRequired,

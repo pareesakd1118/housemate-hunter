@@ -32,7 +32,7 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
                 <option value={"non-binary"}>Non-Binary</option> 
             </select>
                     
-            <select onChange={(e) => setHasPets(e.target.value)} value={hasPets}>
+            <select onChange={(e) => setHasPets(e.target.value)} value={hasPets} name='pet-field'>
                 <option value="">Pets</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
