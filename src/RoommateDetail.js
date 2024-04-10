@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import Loading from './Loading';
 import ErrorMessage from './ErrorMessage';
 import './RoommateDetail.css'
@@ -58,7 +58,7 @@ export default function RoommateDetails() {
                     <div className="detail"> <strong>Gender:</strong> {details.gender}</div>
                     <div className="detail"> <strong>About Me:</strong> {details.bio}</div>
                     <div className="detail"> <strong>Important Notes:</strong> {details.important}</div>
-                    <button className="search-btn" onClick={() => navigate(-1)}>Back to search</button>
+                    <Link to={`/roommates/${details.city}`}><button className="search-btn">Back to search</button></Link>
                 </div>
             </div>
             <Footer />

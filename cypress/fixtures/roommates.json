@@ -1,19 +1,16 @@
-[
-    {
-    "id": 251,
+[ {
+    "id": 1,
     "name": "Isabella Daniels",
-    "gender": "non-binary",
-    "city": "San Francisco",
-    "bio": "Hi, I'm Isabella, a healthcare hero providing compassionate care in the bustling city of San Francisco. Beyond the hospital walls, I'm exploring local farmers' markets or unwinding with a good book in hand. My workspace is an oasis of tranquility amidst the vibrant energy of the city, reflecting the peace and healing I strive to bring to my patients.",
-    "important": "My foot is currently broken so it is important to me to find a place with an elevator.",
-    "created_at": "2024-04-07T22:55:49.336Z",
-    "updated_at": "2024-04-07T22:55:49.336Z",
     "age": 28,
+    "city": "San Francisco",
     "isSmoker": false,
     "hasPets": true,
-    "maxBudget": 3450,
-    "image": "https://images.unsplash.com/photo-1530047198515-516ff90fc4d9?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
+    "maxBudget": 1500,
+    "gender": "female",
+    "bio": "Enjoys quiet evenings and cooking.",
+    "important": "Looking for a roommate who is also tidy and respectful and that actually does their dishes.",
+    "image": "https://images.unsplash.com/photo-1517462964-21fdcec3f25b?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+  },
     {
     "id": 257,
     "name": "Jenny Dayton",

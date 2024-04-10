@@ -5,6 +5,7 @@
       "age": 28,
       "isSmoker": false,
       "hasPets": true,
+      "city": "San Francisco",
       "maxBudget": 1500,
       "gender": "female",
       "bio": "Enjoys quiet evenings and cooking.",
