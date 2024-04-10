@@ -1,7 +1,7 @@
 # Housemate Hunter 🏠
 
 ## Abstract
-Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use Housemate Hunter to search for roommates in your city and filter roommates based on preferences. Want a roommate with a pet? That can easily be found! Our application allows you to read bios for each specific person to find the perfect roommate match. Happy housemate hunting! 
+Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use Housemate Hunter to search for roommates in your city and filter roommates based on preferences. Want a roommate with a pet, find someone with a similar budget or serach by gender, age and smoker/non-smoker? You have come to the right place! Our application allows you to filter for any of the aforementioned parameters, as well as see pictures and read bios/important non-negotiables for each specific person to find the perfect roommate match. Happy housemate hunting! 
 
 ## Contributors 
 [Theo McCray](https://github.com/Virulencies)
@@ -11,6 +11,7 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
 ## Preview
 
 ## Installation Instructions
+Visit Housemate Hunter [here](https://housemate-hunter.vercel.app/). 
 Cypress Testing:
 1. `git clone git@github.com:Virulencies/housemate-hunter-api.git`
 2. `cd housemate-hunter-api`
