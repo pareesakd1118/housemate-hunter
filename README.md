@@ -21,3 +21,6 @@ Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use 
 - Challenges:
 
 ## Future Improvements 
+- Add a favorites feature to be able to track roommate(s) the user is interested in living with.
+- Add the ability to message a roommate.
+- Add more cities to explore roommates in! 
