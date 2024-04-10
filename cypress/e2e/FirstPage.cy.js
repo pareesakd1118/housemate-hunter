@@ -22,7 +22,6 @@ describe('FirstPage Component', () => {
     cy.get('.roommate-container').should('have.length', 1);
   });
  
-  
   it('shows error message to user when page is not found', () => {
     cy.intercept('GET', '/api/v1/roommates', {
       statusCode: 404, 

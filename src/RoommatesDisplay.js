@@ -87,13 +87,12 @@ const allUsers = userInfo.map(user => {
 if(userInfo.length){
     return (  
         <div>
-             <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
-            <div className='roommate-container'>
+            <FilterBar onApplyFilters={handleFilterChange} resetFilters={resetFilters} />
+            <main className='roommate-container'>
             {allUsers} 
-            </div>
+            </main>
         </div>
-
-        )
+    )
     } else {
         return (
             <NotFound />
