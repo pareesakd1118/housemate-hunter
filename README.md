@@ -1,6 +1,7 @@
 # Housemate Hunter 🏠
 
 ## Abstract
+Live in San Fransicso or Denver and looking for a roommate? You're in luck! Use Housemate Hunter to search for roommates in your city and filter roommates based on preferences. Want a roommate with a pet? That can easily be found! Our application allows you to read bios for each specific person to find the perfect roommate match. Happy housemate hunting! 
 
 ## Contributors 
 [Theo McCray](https://github.com/Virulencies)
