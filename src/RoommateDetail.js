@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 import ErrorMessage from './ErrorMessage';
 import './RoommateDetail.css'
@@ -10,6 +10,7 @@ export default function RoommateDetails() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchSpecificRoommate = async () => {
