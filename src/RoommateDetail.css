@@ -1,0 +1,30 @@
+.expanded-image {
+    height: 75vh;
+    border-radius: 20px; 
+}
+
+.outer-div {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    padding-left: 7%;
+    padding-right: 3%;
+}
+
+.inner-div {
+    text-align: left;
+    margin-left: 2%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.detail {
+    margin-bottom: 1%;
+    width: 80%
+}
+
+.search-btn {
+    margin-top: 1%;
+}
