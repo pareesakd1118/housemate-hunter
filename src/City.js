@@ -103,11 +103,6 @@ if(userInfo.length){
             <NotFound />
         )
     }
-
-        </div>
-        
-    )
-
 }
 
 City.propTypes = {
@@ -122,7 +117,7 @@ City.propTypes = {
     ).isRequired,
     setUserData: PropTypes.func.isRequired,
 
-    setAllData: PrpoTypes.func.isRequired,
+    setAllData: PropTypes.func.isRequired,
 
     allData: PropTypes.arrayOf(
         PropTypes.shape({

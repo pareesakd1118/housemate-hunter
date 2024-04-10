@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-
-import React, { useState } from 'react'
+//import React, { useState } from 'react'
 import PropTypes from "prop-types";
 
 
@@ -59,6 +58,9 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
                 <option value="0-999">Under $1000</option>
                 <option value="1000-1999">$1000-$1999</option>
                 <option value="2000-2999">$2000-$2999</option>
+                <option value="3000-3999">$3000-$3999</option>
+                <option value="4000-5000">$4000-$5000</option>
+
             </select>
 
             <button onClick={handleApplyFilterClick}>Apply Filters</button>
