@@ -14,9 +14,7 @@ export default function App() {
   const navigate = useNavigate();
 
   function filterByCity(event){
-    setUserData(allData.filter(user => {
-      return user.city === event.target.value
-    }))
+    setUserData(allData.filter(user => user.city === event.target.value))
 
     navigate(`/roommates/${event.target.value}`)
   }

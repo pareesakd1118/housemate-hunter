@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from './Loading';
+import ErrorMessage from './ErrorMessage';
 
-function RoommateDetails() {
+export default function RoommateDetails() {
   const [details, setDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,18 +14,15 @@ function RoommateDetails() {
       setLoading(true);
       try {
         const response = await fetch(`http://localhost:3001/api/v1/roommates/${id}`);
-        console.log('Raw response:', response);
-
+        
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`${response.status} Error: ${response.statusText}. Unable to retrieve roommate at this time. Please try again later.`);
         }
         const data = await response.json();
-        console.log('Data:', data);
-
+      
         setDetails(data[0]);
         setError(null);
       } catch (error) {
-        console.error("Fetching data failed", error);
         setError(error.message);
         setDetails(null);
       } finally {
@@ -35,15 +34,11 @@ function RoommateDetails() {
   }, [id]);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Loading />
   }
 
   if (error) {
-    return <h1>Error fetching data: {error}</h1>;
-  }
-
-  if (!details) {
-    return <h1>No user found.</h1>;
+    return <ErrorMessage error={error}/>
   }
 
   return (
@@ -62,4 +57,3 @@ function RoommateDetails() {
   );
 }
 
-export default RoommateDetails;

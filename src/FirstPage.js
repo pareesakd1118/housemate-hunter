@@ -23,7 +23,6 @@ FirstPage.propTypes = {
     filterByCity: PropTypes.func.isRequired,
 };
 
-
 FirstPage.propTypes = {
     filterByCity: PropTypes.func.isRequired,
 };

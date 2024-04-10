@@ -59,9 +59,7 @@ const handleFilterChange = (filters) => {
 }
 
 function resetFilters() {
-    setUserData(allData.filter(user => {
-        return user.city === cityDetail; 
-    }))
+    setUserData(allData.filter(user => user.city === cityDetail))
 }
 
 if(error){
