@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import RoommateDetail from './RoommateDetail';
 import NotFound from './NotFound';
 
-function App() {
+export default function App() {
   const [allData, setAllData] = useState([])
   const [userData, setUserData] = useState(allData)
   const navigate = useNavigate();
@@ -33,6 +33,4 @@ function App() {
     </div>
   )
 }
-
-export default App;
 
