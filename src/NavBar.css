@@ -17,3 +17,9 @@ nav {
     padding-bottom: 0;
     background-color: #80b592;
 }
+
+@media screen and (max-width: 767px) {
+    .logo-house {
+        display: none;
+    }
+}

@@ -1,4 +1,3 @@
-
 import Card from "./Card"
 import './RoommatesDisplay.css'
 import { useParams } from 'react-router-dom'

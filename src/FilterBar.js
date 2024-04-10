@@ -1,6 +1,5 @@
 import './FilterBar.css'
 import React, { useState } from 'react';
-//import React, { useState } from 'react'
 import PropTypes from "prop-types";
 
 
