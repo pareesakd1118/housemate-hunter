@@ -26,5 +26,6 @@
     height: 35px; 
     font-size: larger;
     cursor: pointer; 
+    padding: 0; 
 }
 
