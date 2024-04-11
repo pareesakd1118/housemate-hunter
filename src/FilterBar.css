@@ -7,11 +7,11 @@
 .search-btn {
     background-color: #ccc; 
     color: #fff;     
-    padding: 10px 20px;
+    padding: 5px;
     border-radius: 5px; 
     border: 1.5px solid rgb(113, 113, 113); 
     transition: background-color 0.3s ease;
-    font-size: .8em;
+    font-size: 1em;
     width: 20vh;
     height: 6vh;
 }

@@ -28,3 +28,25 @@ h2 {
 .search-btn {
     margin-top: 1%;
 }
+
+/* @media screen and (max-width: 1023px) {
+    .roommate-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1%;
+        margin-bottom: 50%;
+    }
+} */
+
+@media screen and (max-width: 767px) {
+    .outer-div {
+        display: flex; 
+        flex-direction: column; 
+    }
+    .expanded-image {
+        height: 50vh;
+    }
+    .search-btn {
+        width: 15vh; 
+        height: 4vh; 
+    }
+}
