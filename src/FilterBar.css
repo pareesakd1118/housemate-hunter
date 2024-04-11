@@ -11,7 +11,7 @@
     border-radius: 5px; 
     border: 1.5px solid rgb(113, 113, 113); 
     transition: background-color 0.3s ease;
-    font-size: 1em;
+    font-size: .8em;
     width: 20vh;
     height: 6vh;
 }
