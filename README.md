@@ -14,8 +14,7 @@ https://github.com/pareesakd1118/housemate-hunter/assets/150022029/5b740a40-4aeb
 ## Installation Instructions
 - **Install frontend**
 1. Visit Housemate Hunter [here](https://housemate-hunter.vercel.app/) or fork and clone this repo: https://github.com/pareesakd1118/housemate-hunter
-2. `cd housemate-hunter`
-3. `npm start`
+
 - **Install backend/database**
 1. `git clone git@github.com:Virulencies/housemate-hunter-api.git`
 2. `cd housemate-hunter-api`
