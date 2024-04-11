@@ -3,7 +3,8 @@
     margin-top: 2%;
 }
 
-.filter-button {
+.filter-button, 
+.search-btn {
     background-color: #ccc; 
     color: #fff;     
     padding: 10px 20px;
@@ -15,7 +16,8 @@
     height: 6vh;
 }
     
-.filter-button:hover {
+.filter-button:hover, 
+.search-btn:hover {
     background-color: #80b592; 
     cursor: pointer;
 }
