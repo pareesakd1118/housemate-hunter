@@ -15,7 +15,7 @@ export default function RoommateDetails() {
     const fetchSpecificRoommate = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`http://localhost:3001/api/v1/roommates/${id}`);
+        const response = await fetch(`https://deploy-attempt-2914159506b6.herokuapp.com/api/v1/roommates/${id}`);
         
         if (!response.ok) {
           throw new Error(`${response.status} Error: ${response.statusText}. Unable to retrieve roommate at this time. Please try again later.`);

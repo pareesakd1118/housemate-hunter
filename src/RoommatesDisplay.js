@@ -11,15 +11,15 @@ import Footer from './Footer';
 
 export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')
-const [loading, setLoading] = useState(null)
+const [loading, setLoading] = useState(true)
 let cityDetail = useParams().city
 
-useEffect(() => {
+  useEffect(() => {
     getAllRoommates()
 }, [])
 
 function getAllRoommates(){
-    fetch('http://localhost:3001/api/v1/roommates')
+    fetch('https://deploy-attempt-2914159506b6.herokuapp.com/api/v1/roommates')
     .then(res => {
       if(!res.ok){
         throw new Error(`${res.status} Error: ${res.statusText}. Unable to retrieve roommates at this time. Please try again later.`)
@@ -30,12 +30,13 @@ function getAllRoommates(){
     .then(data => {
         setUserData(data.filter(user => user.city === cityDetail))
         setAllData(data)
-        setLoading('true')
+        setLoading(false)
     })
     .catch(error => {
         setError(error.message)
     })
   }
+
 
 const handleFilterChange = (filters) => {
     const filteredUsers = allData.filter(user => {
@@ -65,7 +66,7 @@ if(error){
     )
 }
 
-if(!loading){
+if(loading){
     return (
         <Loading />
     )
