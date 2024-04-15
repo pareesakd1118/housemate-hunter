@@ -13,12 +13,17 @@ https://github.com/pareesakd1118/housemate-hunter/assets/150022029/5b740a40-4aeb
 
 ## Installation Instructions
 - **Install frontend**
-1. Visit Housemate Hunter [here](https://housemate-hunter.vercel.app/) or fork and clone this repo: https://github.com/pareesakd1118/housemate-hunter
+1. `Visit Housemate Hunter [here](https://housemate-hunter.vercel.app/) or fork and clone this repo: https://github.com/pareesakd1118/housemate-hunter`
+2. `cd into housemaye-hunter in your terminal`
+3. `Run 'npm install' in your terminal to install all dependencies`
+4. `Run 'npm start' to start up the frontend.`
 
 - **Install backend/database**
 1. `git clone git@github.com:Virulencies/housemate-hunter-api.git`
-2. `cd housemate-hunter-api`
-3. `node server.js`
+2. `cd into housemate-hunter-api in your terminal`
+3. `Run 'npm install' in your terminal to install all dependencies`
+4. `Run 'node server.js' to start up the backend`
+5. `Return to the frontend tab and navigate through the app!`
 - **Run End to End testing using Cypress**
 1. `npm i -D cypress`
 2. Ensure package.json includes the following:
