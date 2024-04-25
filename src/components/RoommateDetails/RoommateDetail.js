@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Loading from './Loading';
-import ErrorMessage from './ErrorMessage';
+import Loading from '../Loading/Loading';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './RoommateDetail.css'
-import Footer from './Footer'
+import Footer from '../Footer/Footer'
 
 export default function RoommateDetails() {
   const [details, setDetails] = useState(null);

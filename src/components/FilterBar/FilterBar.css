@@ -45,7 +45,7 @@ select, input {
     margin-bottom: 1%
 }
 
-.divider {
+.divider-bar {
     height: 1px;
     background-color: #ccc; 
     width: 95%; 

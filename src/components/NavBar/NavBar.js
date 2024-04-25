@@ -1,5 +1,5 @@
 import "./NavBar.css"
-import House from '../src/assets/house.png';
+import House from '../../assets/house.png';
 import { Link } from "react-router-dom"
 
 export default function NavBar(){

@@ -1,4 +1,4 @@
-import Error from '../src/assets/error.png'
+import Error from '../../assets/error.png'
 import './NotFound.css';
 import { Link } from 'react-router-dom';
 

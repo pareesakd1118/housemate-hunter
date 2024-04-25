@@ -1,13 +1,13 @@
-import Card from "./Card"
+import Card from "../Card/Card"
 import './RoommatesDisplay.css'
 import { useParams } from 'react-router-dom'
-import FilterBar from './FilterBar';
+import FilterBar from '../FilterBar/FilterBar';
 import {useEffect, useState} from 'react';
-import ErrorMessage from './ErrorMessage';
-import NotFound from './NotFound';
-import Loading from './Loading';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import NotFound from '../NotFound/NotFound';
+import Loading from '../Loading/Loading';
 import PropTypes from "prop-types";
-import Footer from './Footer';
+import Footer from '../Footer/Footer';
 
 export default function RoommatesDisplay({userInfo, setUserData, allData, setAllData}){
 const [error, setError] = useState('')

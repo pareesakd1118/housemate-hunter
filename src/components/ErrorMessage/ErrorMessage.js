@@ -1,4 +1,4 @@
-import Error from '../src/assets/error.png';
+import Error from '../../assets/error.png';
 import './ErrorMessage.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';

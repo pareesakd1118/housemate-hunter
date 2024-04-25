@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import './CitySelection.css';
-import Footer from "./Footer"
+import Footer from "../Footer/Footer"
 
 export default function CitySelection({filterByCity}){
 

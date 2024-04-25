@@ -1,12 +1,12 @@
 import './App.css';
-import NavBar from './NavBar';
-import RoommatesDisplay from './RoommatesDisplay';
-import CitySelection from './CitySelection'
+import NavBar from '../NavBar/NavBar';
+import RoommatesDisplay from '../RoommateDisplay/RoommatesDisplay';
+import CitySelection from '../CitySelection/CitySelection'
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import RoommateDetail from './RoommateDetail';
-import NotFound from './NotFound';
+import RoommateDetail from '../RoommateDetails/RoommateDetail';
+import NotFound from '../NotFound/NotFound';
 
 export default function App() {
   const [allData, setAllData] = useState([])

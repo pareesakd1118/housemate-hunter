@@ -66,7 +66,7 @@ export default function FilterBar({onApplyFilters, resetFilters}) {
                 <button className='filter-button' onClick={handleApplyFilterClick}>Apply Filters</button>
                 <button className='filter-button' onClick={resetFilters}>Reset Filters</button>
             </div>
-            <div class="divider"></div>
+            <div class="divider-bar"></div>
         </div>
     )    
 };

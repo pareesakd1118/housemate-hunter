@@ -1,4 +1,4 @@
-import House from '../src/assets/house.png';
+import House from '../../assets/house.png';
 import './Loading.css';
 
 export default function Loading(){
